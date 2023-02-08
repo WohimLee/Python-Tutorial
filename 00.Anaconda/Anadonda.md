@@ -132,7 +132,6 @@ conda create --name [自定义环境名] --file pkgs.txt
 
 &emsp;
 # 4 包管理
-&emsp;
 ## 4.1 列举当前活跃环境下的所有包
 ```shell
 conda list

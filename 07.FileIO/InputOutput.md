@@ -1,7 +1,6 @@
 &emsp;
 # Python 输入和输出
 
-&emsp;
 # 1 读和写文件
 open() 将会返回一个 file 对象，基本语法格式如下:
 ```python
