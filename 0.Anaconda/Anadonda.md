@@ -36,7 +36,7 @@ conda remove --help
 
 &emsp;
 # 3 环境管理
-&emsp;
+
 ## 3.1 列举当前所有环境
 ```shell
 conda info --envs
@@ -98,25 +98,11 @@ conda create --name [自定义新环境名] --clone [原有的环境名]
 ```
 
 
-
 &emsp;
 ## 3.10 分享环境
 如果你想把你当前的环境配置与别人分享，这样ta可以快速建立一个与你一模一样的环境（同一个版本的python及各种包）来共同开发/进行新的实验。一个分享环境的快速方法就是给ta一个你的环境的.yml文件。
 
->方法一：（不推荐，很慢）
 
-首先通过activate [自定义环境名] 进入要分享的环境[自定义环境名]，然后输入下面的命令会在当前工作目录下生成一个environment.yml文件，
-
-```shell
-conda env export > environment.yml
-```
-
-小伙伴拿到environment.yml文件后，将该文件放在工作目录下，可以通过以下命令从该文件创建环境
-```shell
-conda env create -f environment.yml
-```
-
->方法二：（墙裂推荐！！！很快）
 
 首先通过activate [自定义环境名] 进入要分享的环境[自定义环境名]，然后输入下面的命令会在当前工作目录下生成一个 pkgs.txt 文件，
 
@@ -124,7 +110,7 @@ conda env create -f environment.yml
 conda list --explicit > pkgs.txt
 ```
 
-小伙伴拿到environment.yml文件后，将该文件放在工作目录下，可以通过以下命令从该文件创建环境
+小伙伴拿到 environment.yml 文件后，将该文件放在工作目录下，可以通过以下命令从该文件创建环境
 ```shell
 conda create --name [自定义环境名] --file pkgs.txt
 ```
@@ -145,12 +131,13 @@ conda list -n your_env_name
 
 &emsp;
 ## 4.3 为指定环境安装某个包
->方法一：（不推荐）
+>方法一：推荐
 ```shell
-conda install -n [自定义环境名] [某个包名]
+# 先 activate 你想装的环境
+pip install [某个包名]
 ```
 
->方法二：（墙裂推荐！！！）
+>方法二：在方法一失效的情况下使用
 
 - 如果在终端直接输入pip安装，anaconda 会把所有东西都安装到默认的 base 环境下。如果想安装到自己创建的虚拟环境，需要找到自己创建的虚拟环境的pip命令所在目录。
 ### 步骤：

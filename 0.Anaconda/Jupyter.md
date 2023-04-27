@@ -1,5 +1,8 @@
 &emsp;
 # Jupyter
+```py
+
+```
 
 &emsp;
 # 1 查看所有的 kernel
