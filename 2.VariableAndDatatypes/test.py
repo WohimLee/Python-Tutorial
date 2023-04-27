@@ -1,3 +1,14 @@
 
-a, b, c, d, e = 20, 5.5, True, 4+3j, 2.
-print(type(a), type(b), type(c), type(d), type(e))
+class Module:
+    pass
+
+class Linear(Module):
+    pass
+
+module = Module()
+linear = Linear()
+
+print(isinstance(module, Module))
+print("module type: ", type(module))
+print(isinstance(linear, Module))
+print("linear type: ", type(linear))

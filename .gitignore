@@ -1,3 +1,7 @@
 
 # files
 *.DS_Store
+test.py
+
+# folder
+__pycache__

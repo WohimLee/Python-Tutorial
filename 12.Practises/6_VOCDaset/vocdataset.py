@@ -1,5 +1,4 @@
 import os
-from typing_extensions import Annotated
 import cv2
 import time
 import utils
