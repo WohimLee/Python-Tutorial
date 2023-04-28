@@ -19,7 +19,6 @@ def mnist_images(path):
 
 
 
-
 if __name__ == '__main__':
     test_i  = "/datav/MyLesson/Dataset/MNIST/raw/t10k-images-idx3-ubyte"
     test_l  = "/datav/MyLesson/Dataset/MNIST/raw/t10k-labels-idx1-ubyte"
