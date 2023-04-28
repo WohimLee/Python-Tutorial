@@ -1,23 +1,10 @@
 &emsp;
 # Pandas 数据结构 - Series
-Pandas Series 类似表格中的一个列（column），类似于一维数组，可以保存任何数据类型。
 
-在操作Series的时候，基本上可以把Series看成NumPy中的ndarray数组来进行操作，ndarray数组的绝大多数操作都可以应用到Series上
-
-Series 由索引（index）和列组成，函数如下：
-```python
-pandas.Series( data, index, dtype, name, copy)
-```
->参数
-- data：一组数据(ndarray 类型)。
-- index：数据索引标签，如果不指定，默认从 0 开始。
-- dtype：数据类型，默认会自己判断。
-- name：设置名称。
-- copy：拷贝数据，默认为 False。
 
 &emsp;
 # 1 创建 Series
-&emsp;
+
 >示例 1：创建一个简单的 Series
 ```python
 import pandas as pd
@@ -129,29 +116,3 @@ print(obj1 + obj2)
 ```
 
 
-&emsp;
-# 5 函数
-
-&emsp;
-## 5.1 isnull
-- 缺失值检测
-
->语法
-```
-pd.isnull(obj)
-obj.isnull()
-```
-
->示例
-```py
-import numpy as np
-import pandas as pd
-
-
-obj1 = pd.Series([4,7,-5,3], index=['d','f','b','c'])
-obj1.index = ['one','two','three','four']
-obj2 = pd.Series([195, 73,1], index=['a','b','one'])
-res = obj1 + obj2
-mask = ~res.isnull()
-print(res[mask])
-```

@@ -1,143 +1,15 @@
 &emsp;
 # Pandas 数据结构 - DataFrame
-- DataFrame 是一个表格型的数据结构，它含有一组有序的列，每列可以是不同的值类型（数值、字符串、布尔型值）。
-- DataFrame 既有行索引也有列索引，它可以被看做由 Series 组成的字典（共同用一个索引）。
-- DataFrame 是一个二维的数组结构，类似二维数组。
 
 
 
->DataFrame 构造方法
-```python
-pandas.DataFrame( data, index, columns, dtype, copy)
-```
-- 参数说明：
-
-    - data：一组数据(ndarray、series, map, lists, dict 等类型)。
-    - index：索引值，或者可以称为行标签。
-    - columns：列标签，默认为 RangeIndex (0, 1, 2, …, n) 。
-    - dtype：数据类型。
-    - copy：拷贝数据，默认为 False。
-
-&emsp;
-# 1 创建DataFrame
-&emsp;
->示例 1：使用列表创建
-```python
-import pandas as pd
-
-data = [['Google',10],['Baidu',12],['Wiki',13]]
-# 指定列
-df = pd.DataFrame(data,columns=['Site','Age'],dtype=float)
-print(df)
-```
-
-&emsp;
->示例 2：使用 ndarrays 创建
-```python
-# 使用 ndarrays 创建，ndarray 的长度必须相同， 如果传递了 index，则索引的长度应等于数组的长度。如果没有传递索引，则默认情况下，索引将是range(n)，其中n是数组长度。
-
-import pandas as pd
-
-data = {'Site':['Google', 'Baidu', 'Wiki'], 'Age':[10, 12, 13]}
-df = pd.DataFrame(data)
-print (df)
-```
-
-
-&emsp;
->示例 3：使用字典创建
-```python
-# 还可以使用字典（key/value），其中字典的 key 为列名
-import pandas as pd
-
-data = {
-'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada', 'Nevada'],
-'year': [2000, 2001, 2002, 2001, 2002, 2003],
-'pop': [1.5, 1.7, 3.6, 2.4, 2.9, 3.2]}
-
-df = pd.DataFrame(data)
-# 没有对应的部分数据为 NaN
-print(df)
-
-
-data = {"grammer":["Python","C","Java","GO",np.nan,"SQL","PHP","Python"],
-       "score":[1,2,np.nan,4,5,6,7,10]}
-
-df = pd.DataFrame(data)
-print(df)
-```
-
-&emsp;
-# 2 基础操作
-&emsp;
->示例 1
-```py
-import pandas as pd
-data = {
-'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada', 'Nevada'],
-'year': [2000, 2001, 2002, 2001, 2002, 2003],
-'pop': [1.5, 1.7, 3.6, 2.4, 2.9, 3.2]}
-
-df = pd.DataFrame(data, columns=['year', 'state', 'pop', 'debt'], index=['one', 'two', 'three',
-'four', 'five','six'])
-# 列在数据中找不到，就会在结果中产生缺失值
-print(df)
-# 查看属性
-print(df.columns)
-```
-&emsp;
-## 2.1 增
-
-
->示例 ：添加行、列
-```py
-import pandas as pd
-import numpy as np
-
-data = {"grammer":["Python","C","Java","GO",np.nan,"SQL","PHP","Python"],
-       "score":[1,2,np.nan,4,5,6,7,10]}
-df = pd.DataFrame(data)
-print(df)
-
-print("---------------------")
-new_row = {"grammer":'perl',"score":90}
-df = df.append(new_row, ignore_index=True)
-print(df)
-```
-
-
-&emsp;
-## 2.2 删
->示例 ：删除行、列
-```py
-import pandas as pd
-import numpy as np
-
-frame = pd.DataFrame(np.arange(9).reshape((3, 3)),index=['a', 'c', 'd'])
-data = frame.drop(['a'])
-print(data)
-print("----------------------")
-data = frame.drop(1, axis=1)
-print(data)
-```
 
 
 
 &emsp;
 ## 2.3 改
 
->示例1 ：reindex修改行、列
 
-```py
-import pandas as pd
-import numpy as np
-
-frame1 = pd.DataFrame(np.arange(9).reshape((3, 3)),index=['a', 'c', 'd'])
-frame2 = frame1.reindex(['a', 'd','c'])
-frame3 = frame1.reindex([2,1,0,3],axis=1)
-print(frame2)
-print(frame3)
-```
 
 >示例 2
 ```py
@@ -148,14 +20,6 @@ data[data < 5] =0
 print(data)
 ```
 
->示例 3：填充 NaN 值
-```python
-data = {"grammer":["Python","C","Java","GO",np.nan,"SQL","PHP","Python"],
-       "score":[1,2,np.nan,4,5,6,7,10]}
-df = pd.DataFrame(data)
-df.fillna(0,inplace=True)
-print(df,'\n')
-```
 
 &emsp;
 ## 2.4 查
