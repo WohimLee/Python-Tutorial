@@ -59,8 +59,8 @@ fig.suptitle('Logistic Distribution')
 fig.tight_layout()
 
 
-# plt.show()
-fig.savefig('../imgs/logistic.png')
+plt.show()
+# fig.savefig('../imgs/logistic.png')
 
 
 
