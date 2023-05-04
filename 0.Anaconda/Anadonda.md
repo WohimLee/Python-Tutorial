@@ -16,7 +16,6 @@
 
 &emsp;
 # Anaconda 常用命令
-&emsp;
 # 1 获取版本号
 ```
 conda --version

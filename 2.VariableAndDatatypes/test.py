@@ -1,14 +1,10 @@
 
-class Module:
-    pass
 
-class Linear(Module):
-    pass
 
-module = Module()
-linear = Linear()
-
-print(isinstance(module, Module))
-print("module type: ", type(module))
-print(isinstance(linear, Module))
-print("linear type: ", type(linear))
+vgg11 = [64, 'M', 128, 'M', 256, 256, 'M', 512, 512, 'M', 512, 512]
+cfg = [
+    [64, 'M', 128, 'M', 256, 256, 'M', 512, 512, 'M', 512, 512],
+    [64, 64, 'M', 128, 128, 'M', 256, 256, 'M', 512, 512, 'M', 512, 512],
+    [64, 64, 'M', 128, 128, 'M', 256, 256, 256, 'M', 512, 512, 512, 'M', 512, 512, 512],
+    [64, 64, 'M', 128, 128, 'M', 256, 256, 256, 256, 'M', 512, 512, 512, 512, 'M', 512, 512, 512, 512]
+]
