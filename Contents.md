@@ -128,6 +128,14 @@
 - 读、编辑、写操作
 - 常用 API 学习
 
+### 10.4 OpenCV
+
+### 10.5 其它库
+- argparse
+- logging
+- os
+- tqdm
+- xml, json, yaml, pickle
 
 
 
