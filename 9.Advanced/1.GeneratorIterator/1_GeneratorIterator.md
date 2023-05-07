@@ -194,5 +194,3 @@ if __name__ == '__main__':
         count += 1
 ```
 
-3 enumerate
-4 zip

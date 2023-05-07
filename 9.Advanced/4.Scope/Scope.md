@@ -1,22 +1,18 @@
 
 &emsp;
 # 1 作用域
+- Python 中，变量在哪里赋值，决定了这个变量的访问权限
+- Python 中，访问一个变量，会从内到外依次访问所有的作用域直到找到，否则会报未定义的错误
 
-- 作用域就是一个 Python 程序可以直接访问命名空间的区域。
-
-- 在一个 python 程序中，直接访问一个变量，会从内到外依次访问所有的作用域直到找到，否则会报未定义的错误。
-
-- Python 中，程序的变量并不是在哪个位置都可以访问的，访问权限决定于这个变量是在哪里赋值。
-
-变量的作用域决定了在哪一部分程序可以访问哪个特定的变量名称。
+变量的作用域决定了在哪一部分程序可以访问哪个特定的变量名称
 
 &emsp;
 ## 1.1 四种作用域：
 
-- L（Local）：最内层，包含局部变量，比如一个函数/方法内部。
-- E（Enclosing）：包含了非局部(non-local)也非全局(non-global)的变量。比如两个嵌套函数，一个函数（或类） A 里面又包含了一个函数 B ，那么对于 B 中的名称来说 A 中的作用域就为 nonlocal。
-- G（Global）：当前脚本的最外层，比如当前模块的全局变量。
-- B（Built-in）： 包含了内建的变量/关键字等，最后被搜索。
+- L（Local）：最内层，包含局部变量，比如一个函数/方法内部
+- E（Enclosing）：包含了非局部(non-local)也非全局(non-global)的变量。比如两个嵌套函数，一个函数（或类） A 里面又包含了一个函数 B ，那么对于 B 中的名称来说 A 中的作用域就为 nonlocal
+- G（Global）：当前脚本的最外层，比如当前模块的全局变量
+- B（Built-in）： 包含了内建的变量/关键字等，最后被搜索
 
 >示例
 ```python 
@@ -50,10 +46,6 @@ print(msg)
 def test():
     msg_inner = 'I am from Runoob'
 print(msg_inner)
-'''
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'msg_inner' is not defined'''
 ```
 - 示例中 msg 变量定义在 if 语句块中，但外部还是可以访问的。
 - 如果将 msg 定义在函数中，则它就是局部变量，外部不能访问
@@ -98,7 +90,7 @@ print(total)
 
 
 &emsp;
-## 1.5 Enclosing —— 闭包
+## 1.5 Enclosing
 
 如果要修改嵌套作用域（enclosing 作用域，外层非全局作用域）中的变量则需要 nonlocal 关键字了，如下实例：
 
