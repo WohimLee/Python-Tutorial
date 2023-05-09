@@ -13,7 +13,7 @@
 
 
 &emsp;
-## .1 load 和 loads （反序列化）
+## 1 load 和 loads （反序列化）
 >load
 - 针对文件句柄，将json格式的字符转换为dict，从文件中读取 (将string转换为dict)
 ```py
@@ -27,7 +27,7 @@ a = json.loads('{'a':'1111','b':'2222'}')
 ```
 
 &emsp;
-## .2dump 和 dumps（序列化）
+## 2 dump 和 dumps（序列化）
 
 >dump
 - 将dict类型转换为json字符串格式，写入到文件 （易存储）
@@ -41,7 +41,7 @@ json.dump(a_dict, open('demo.json', 'w')
 a_dict = {'a':'1111','b':'2222'}
 a_str = json.dumps(a_dict)
 ```
-## .3 总结
+## 3 总结
 - 根据序列化和反序列的特性
     - loads： 是将string转换为dict
     - load： 是将里json格式字符串转化为dict，读取文件

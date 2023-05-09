@@ -4,7 +4,6 @@
 &emsp;
 # 1 os方法
 
-&emsp;
 ## 1.1 os.listdir(path)
 - 返回path指定的文件夹包含的文件或文件夹的名字的列表。
 
