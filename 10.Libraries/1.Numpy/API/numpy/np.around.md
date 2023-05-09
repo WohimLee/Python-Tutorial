@@ -1,5 +1,5 @@
 &emsp;
-# np.around() 
+# np.around / round
 - 函数返回指定数字的四舍五入值。
 ```python
 numpy.around(a,decimals)
@@ -21,6 +21,7 @@ print (np.around(a))
 print (np.around(a, decimals = 1))
 print (np.around(a, decimals = 2))
 ```
+
 
 &emsp;
 # np.floor

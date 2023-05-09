@@ -1,0 +1,6 @@
+&emsp;
+# np.linspace
+
+
+
+

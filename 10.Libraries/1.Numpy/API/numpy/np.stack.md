@@ -1,11 +1,10 @@
 
 &emsp;
 # np.stack
-- numpy.stack 函数用于沿 `新轴` 连接数组序列，格式如下：
+numpy.stack 函数用于沿 `新轴` 连接数组序列，格式如下：
 ```python
 numpy.stack(arrays, axis)
 ```
-参数说明：
 
 - arrays相同形状的数组序列
 - axis：返回数组中的轴，输入数组沿着它来堆叠
@@ -30,7 +29,7 @@ print(res.shape)
 
 &emsp;
 # np.hstack
-- numpy.hstack 是 numpy.stack 函数的变体，它通过`水平堆叠（堆叠第1维）`来生成数组。
+- numpy.hstack 是 numpy.stack 函数的变体，它通过`水平堆叠（堆叠第1维）`来生成数组
 
 >示例
 ```python
@@ -63,7 +62,7 @@ print(res.shape)
 
 &emsp;
 # np.vstack
-- numpy.vstack 是 numpy.stack 函数的变体，它通过`垂直堆叠（堆叠第0维）`来生成数组。
+- numpy.vstack 是 numpy.stack 函数的变体，它通过`垂直堆叠（堆叠第0维）`来生成数组
 
 >示例
 ```python

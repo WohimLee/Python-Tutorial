@@ -2,7 +2,7 @@
 
 &emsp;
 # np.concatenate
-- numpy.concatenate 函数用于沿指定轴连接 `相同形状` 的 `两个或多个`数组，格式如下：
+numpy.concatenate 函数用于沿指定轴连接 `相同形状` 的 `两个或多个`数组，格式如下：
 ```python
 numpy.concatenate((a1, a2, ...), axis)
 ```
@@ -14,15 +14,12 @@ numpy.concatenate((a1, a2, ...), axis)
 >示例
 ```python
 import numpy as np
-
-a = np.arange(24).reshape(3, 2, 4)
-b = np.arange(24).reshape(3, 2, 4)
+a = np.arange(24).reshape(2, 3, 4)
+b = np.arange(24).reshape(2, 3, 4)
 
 c = np.concatenate((a, b), axis=0)
+c = np.concatenate((a, b), axis=1)
+c = np.concatenate((a, b), axis=2)
 
-print(a)
-print("------------------------")
-print(b)
-print("------------------------")
 print(c.shape)
 ```

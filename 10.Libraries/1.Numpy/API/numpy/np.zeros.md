@@ -1,7 +1,7 @@
 
 &emsp;
 # np.empty
-- numpy.empty 方法用来创建一个指定形状（shape）、数据类型（dtype）且未初始化的数组：
+numpy.empty 方法用来创建一个指定形状（shape）、数据类型（dtype）且未初始化的数组：
 ```python
 numpy.empty(shape, dtype = float, order = 'C')
 ```
@@ -66,9 +66,4 @@ print(x)
 # 自定义类型
 x = np.ones([2,2], dtype = int)
 print(x)
-'''输出结果为：
-
-[1. 1. 1. 1. 1.]
-[[1 1]
- [1 1]]'''
 ```
