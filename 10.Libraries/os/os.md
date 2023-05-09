@@ -131,22 +131,6 @@ for root, dirs, files in os.walk(".", topdown=False):
 
 &emsp;
 # 2 os.path 模块
-
-## 2.1 os.path.exists(path)	
-- 判断路径是否存在，路径存在则返回True,路径损坏返回False
->示例
-```python
-import os
-if os.path.exists("/datav/MyLesson/1_Python/10_Libraries/4_os/aaa"):
-    print("文件夹已存在")
-```
-
-## 2.2 os.path.join(path1[, path2[, ...]])	
-- 把目录和文件名合成一个路径
-
->示例
-```python
-import os
-path = os.path.join(".", "aaa", "bbb")
-print(path)
+```py
+import os.path as osp
 ```
