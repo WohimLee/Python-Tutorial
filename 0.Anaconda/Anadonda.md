@@ -34,29 +34,21 @@ conda remove --help
 conda info --envs
 conda env list
 ```
->创建环境
+
+>创建指定 python 版本的环境
 ```shell
-conda create --name [自定义环境名称]
+conda create --name [自定义环境名称] python=2.7
+conda create --name [自定义环境名称] python=3
+conda create --name [自定义环境名称] python=3.5
+```
+
 # 输入y确认创建。
 ```
 >删除某个环境
 ```shell
 conda remove --name [自定义环境名] --all
 ```
->创建制定python版本的环境
-```shell
-conda create --name [自定义环境名称] python=2.7
-conda create --name [自定义环境名称] python=3
-conda create --name [自定义环境名称] python=3.5
-```
->创建包含某些包的环境
-```
-conda create --name [自定义环境名称] numpy scipy
-```
->创建指定python版本下包含某些包的环境
-```
-conda create --name [自定义环境名称] python=3.5 numpy scipy
-```
+
 
 >进入某个环境
 ```shell
@@ -96,7 +88,7 @@ conda list -n your_env_name
 - 方法一：推荐
     ```shell
     # 先 activate 你想装的环境
-    pip install [某个包名]
+    pip install [某个包名] -i https://pypi.tuna.tsinghua.edu.cn/simple 
     ```
 
 - 方法二：在方法一失效的情况下使用

@@ -1,7 +1,8 @@
 &emsp;
 # Jupyter
 ```shell
-pip install jupyterlab
+pip install jupyterlab -i https://pypi.tuna.tsinghua.edu.cn/simple 
+pip install ipykernel -i https://pypi.tuna.tsinghua.edu.cn/simple 
 ```
 
 &emsp;

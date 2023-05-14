@@ -1,14 +1,5 @@
 
-class A:
-    pass
 
-class B(A):
-    pass
+content = input("请输入你的内容：")
 
-a = A()
-b = B()
-
-print(isinstance(a, A))
-print(type(a))
-print(isinstance(b, A))
-print(type(b))
+print("您输入的内容是：", content)
