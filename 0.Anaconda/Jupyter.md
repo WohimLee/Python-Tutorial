@@ -1,7 +1,7 @@
 &emsp;
 # Jupyter
-```py
-
+```shell
+pip install jupyterlab
 ```
 
 &emsp;
@@ -9,6 +9,7 @@
 ```shell
 jupyter kernelspec list
 ```
+
 
 &emsp;
 # 2 添加 kernel
