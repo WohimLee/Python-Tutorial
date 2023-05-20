@@ -21,16 +21,16 @@ open(filename, mode)
   模式	|描述
   :--|:--
   r	|以只读方式打开文件。文件的指针将会放在文件的开头。这是默认模式
-  rb	|以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头
   r+	|打开一个文件用于读写。文件指针将会放在文件的开头
-  rb+	|以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头
   w	|打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件
-  wb	|以二进制格式打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件
   w+	|打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件
-  wb+	|以二进制格式打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件
   a	|打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入
-  ab	|以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入
   a+	|打开一个文件用于读写。如果该文件已存在，文件指针将会放在文件的结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写
+  rb	|以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头
+  rb+	|以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头
+  wb	|以二进制格式打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件
+  wb+	|以二进制格式打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件
+  ab	|以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入
   ab+	|以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写
 
 
@@ -87,3 +87,41 @@ with open(savepath, "w") as f:
         f.write("Test accuracy: "+str(acc))
 ```
 
+
+&emsp;
+# 3 YMAL
+- 本质就是字典
+```py
+import yaml
+
+# Specify the path to your YAML file
+file_path = './data/yolov5s.yaml'
+
+# Open the file and load its contents
+with open(file_path, 'r') as file:
+    yaml_data = yaml.load(file, Loader=yaml.FullLoader)
+
+# Access the data from the YAML file
+print(type(yaml_data))
+print(yaml_data)
+```
+
+
+&emsp;
+# 4 JSON
+
+```py
+import json
+
+# Specify the path to your JSON file
+file_path = './data/transforms_train.json'
+
+# Open the file and load its contents
+with open(file_path, 'r') as file:
+    json_data = json.load(file)
+
+# Access the data from the JSON file
+print(type(json_data))
+print(len(json_data))
+print(json_data.keys())
+```

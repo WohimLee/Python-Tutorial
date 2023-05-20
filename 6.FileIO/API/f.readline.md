@@ -6,7 +6,7 @@
 >示例
 ```python
 # 打开一个文件
-f = open("./files/foo1.txt", "r")
+f = open("./data/foo1.txt", "r")
 str = f.readline()
 print(str)
 # 关闭打开的文件

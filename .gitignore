@@ -2,7 +2,11 @@
 # files
 *.DS_Store
 test.py
+Excercise-class.md
+Excercise-home.md
+
 
 # folder
 __pycache__
 test
+homework
