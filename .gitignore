@@ -2,9 +2,8 @@
 # files
 *.DS_Store
 test.py
-Excercise-class.md
-Excercise-home.md
-
+Exercise-class.md
+Exercise-home.md
 
 # folder
 __pycache__
