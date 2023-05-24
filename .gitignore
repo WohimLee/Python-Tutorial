@@ -2,6 +2,7 @@
 # files
 *.DS_Store
 test.py
+rewrite.py
 Exercise-class.md
 Exercise-home.md
 
@@ -9,3 +10,4 @@ Exercise-home.md
 __pycache__
 test
 homework
+Practises
