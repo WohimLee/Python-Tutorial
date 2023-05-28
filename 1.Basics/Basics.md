@@ -41,7 +41,7 @@ $ python test.py
 
 Python 可以同一行显示多条语句，方法是用分号 `;` 分开，如：
 ```
-print('hello');print('kiwi');
+print('hello', end=" ");print('kiwi');
 ```
 
 &emsp;

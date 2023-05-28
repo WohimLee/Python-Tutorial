@@ -19,19 +19,18 @@ label, image = voc_dataset[index]
 
 &emsp;
 ## Exercise 2: Toolkit
-### 类：Module
+### 基类：Module
 ```
 m = Module()
 m.name
 m.training
-print(x)
+print(m)
 m(x)
-m.parameters()
 ```
 - 子类： class DerivedClass(Module)
 >Linear
 $$y = x\times w + b$$
-- $w$: weights，权重，用 np.random.randn 初始化
+- $w$: weights，权重，用 np.random.randn 初始化, np.random.seed(2023)
 - $b$: bias，噪声，初始化值为 0
 ```py
 linear = Linear()
@@ -42,7 +41,9 @@ gd = linear.backward()
 ```
 
 >Sigmoid
-$$sigmoid = \frac{1}{1+e^{-x}}$$
+$$f(x) = sigmoid = \frac{1}{1+e^{-x}}$$
+
+$$f'(x) = sigmoid(x)\times(1 - sigmoid(x))$$
 ```py
 sigmoid = Sigmoid()
 output = sigmoid(x)
@@ -51,7 +52,7 @@ gd = sigmoid.backward()
 
 
 >ReLU
-$$ReLU = \begin{cases} 1，if\ x>0\\ 0，otherwise\end{cases}$$
+$$ReLU = \begin{cases} x，if\ x>0\\ 0，otherwise\end{cases}$$
 
 ```py
 relu = ReLU()
@@ -66,6 +67,9 @@ mse_loss = MSELoss()
 output = mse_loss(y_predict, y_target)
 gd = mse_loss.backward()
 ```
+
+>前向传播过程
+$$y_{predict} = sigmoid(linear(x))$$
 
 
 
