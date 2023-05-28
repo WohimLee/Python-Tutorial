@@ -68,8 +68,4 @@ output = mse_loss(y_predict, y_target)
 gd = mse_loss.backward()
 ```
 
->前向传播过程
-$$y_{predict} = sigmoid(linear(x))$$
-
-
 
