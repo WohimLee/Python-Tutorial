@@ -1,7 +1,6 @@
 &emsp;
 # Exercise
 
-&emsp;
 ## Exercise 1: Bounding Box
 <div align=center>
     <image src="./imgs/bbox.png" width=500>

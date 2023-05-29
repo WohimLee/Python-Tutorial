@@ -68,4 +68,8 @@ output = mse_loss(y_predict, y_target)
 gd = mse_loss.backward()
 ```
 
+>CrossEntropyLoss
+$$ $$
+```py
 
+```
