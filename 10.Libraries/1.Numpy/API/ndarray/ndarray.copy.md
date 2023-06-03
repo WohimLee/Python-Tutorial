@@ -1,5 +1,5 @@
 &emsp;
-# np.copy
+# ndarray.copy
 
 ```py
 import numpy as np

@@ -71,3 +71,12 @@ print(x)
 
 &emsp;
 # np.eye
+
+```py
+var1 = np.eye(4)
+var2 = np.eye(4, 4)
+var3 = np.eye(3, 4)
+print(var1)
+print(var2)
+print(var3)
+```

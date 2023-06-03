@@ -33,18 +33,18 @@ import numpy as np
 
 # 1. 不指定权重时相当于 mean 函数
 a = np.array([1,2,3,4])  
-print ('我们的数组是：')
-print (a)
-print ('调用 average() 函数：')
-print (np.average(a))
+print('我们的数组是：')
+print(a)
+print('调用 average() 函数：')
+print(np.average(a))
 
 # 2. 加权平均
 wts = np.array([4,3,2,1])  
-print ('再次调用 average() 函数：')
-print (np.average(a, weights = wts))
+print('再次调用 average() 函数：')
+print(np.average(a, weights = wts))
 # 如果 returned 参数设为 true，则返回权重的和  
-print ('权重的和：')
-print (np.average([1,2,3,4], weights = [4,3,2,1], returned = True))
+print('权重的和：')
+print(np.average([1,2,3,4], weights = [4,3,2,1], returned = True))
 ```
 
 &emsp;
@@ -61,10 +61,7 @@ print (np.average([1,2,3,4], weights = [4,3,2,1], returned = True))
 ```python
 import numpy as np
  
-print (np.var([1,2,3,4]))
-输出结果为：
-
-1.25
+print(np.var([1,2,3,4]))
 ```
 
 
@@ -87,8 +84,6 @@ import numpy as np
 # 因此，差的平方是 [2.25,0.25,0.25,2.25]，并且再求其平均值的平方根除以 4，即 sqrt(5/4) 
 # 结果为 1.1180339887498949。
 
-print (np.std([1,2,3,4]))
-'''输出结果为：
-1.1180339887498949'''
+print(np.std([1,2,3,4]))
 ```
 

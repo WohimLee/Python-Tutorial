@@ -18,20 +18,14 @@ import numpy as np
 x =  [[1,2,3], [4,5,6]] 
 a = np.asarray(x)  
 print (a)
-'''输出结果为：
-[1  2  3]'''
 
 # 示例2：将元组转换为 ndarray:
 x =  ((1,2,3), (4,5,6)) 
 a = np.asarray(x)  
 print (a)
-'''输出结果为：
-[1  2  3]'''
 
 # 示例3：设置了 dtype 参数：
 x =  [1,2,3] 
 a = np.asarray(x, dtype=np.float32)  
 print (a)
-'''输出结果为：
-[ 1.  2.  3.]'''
 ```

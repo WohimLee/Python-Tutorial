@@ -1,6 +1,23 @@
 &emsp;
 # np.sum
+- 加和
+```py
+import numpy as np
 
+var = np.arange(36).reshape(2, 3, 6)
+print(var)
+print("axis=0: ")
+res = np.sum(var, axis=0)
+print(res, res.shape)
+
+print("axis=1: ")
+res = np.sum(var, axis=1)
+print(res, res.shape)
+
+print("axis=2: ")
+res = np.sum(var, axis=2)
+print(res, res.shape)
+```
 
 
 &emsp;
