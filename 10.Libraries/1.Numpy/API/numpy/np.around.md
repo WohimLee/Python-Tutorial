@@ -1,6 +1,6 @@
 &emsp;
 # np.around / round
-- 函数返回指定数字的四舍五入值。
+- 函数返回指定数字的四舍五入值
 ```python
 numpy.around(a,decimals)
 ```

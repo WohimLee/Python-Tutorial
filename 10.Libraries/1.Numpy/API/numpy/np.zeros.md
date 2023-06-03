@@ -67,3 +67,7 @@ print(x)
 x = np.ones([2,2], dtype = int)
 print(x)
 ```
+
+
+&emsp;
+# np.eye

@@ -8,14 +8,14 @@
 import numpy as np 
  
 a = np.arange(24).reshape(3, 2, 4)
-print ('我们的数组是：')
-print (a)
-print ('调用 mean() 函数：')
-print (np.mean(a)) 
-print ('沿轴 0 调用 mean() 函数：')
-print (np.mean(a, axis =  0)) # shape (2, 4)
-print ('沿轴 1 调用 mean() 函数：')
-print (np.mean(a, axis =  1)) # shape (3, 4)
+print('我们的数组是：')
+print(a)
+print('调用 mean() 函数：')
+print(np.mean(a)) 
+print('沿轴 0 调用 mean() 函数：')
+print(np.mean(a, axis =  0)) # shape (2, 4)
+print('沿轴 1 调用 mean() 函数：')
+print(np.mean(a, axis =  1)) # shape (3, 4)
 ```
 
 &emsp;
@@ -49,7 +49,7 @@ print (np.average([1,2,3,4], weights = [4,3,2,1], returned = True))
 
 &emsp;
 # np.sqrt
-
+- 开平方
 
 &emsp;
 # np.var

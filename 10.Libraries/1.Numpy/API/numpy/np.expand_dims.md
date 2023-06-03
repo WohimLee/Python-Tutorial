@@ -2,12 +2,13 @@
 &emsp;
 
 # np.expand_dims
-numpy.expand_dims 函数通过在指定位置插入新的轴来扩展数组形状，函数格式如下:
-```python
-numpy.expand_dims(arr, axis)
-```
-- arr：输入数组
-- axis：新轴插入的位置
+- 在指定位置插入新的轴来扩展数组形状
+    ```python
+    numpy.expand_dims(arr, axis)
+    ```
+  - arr：输入数组
+  - axis：新轴插入的位置
+- 跟
 
 >示例
 ```python

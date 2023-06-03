@@ -2,7 +2,8 @@
 
 &emsp;
 # ndarray.T 
-- 类似 numpy.transpose：
+- 矩阵的转置
+- 类似 numpy.transpose
 
 >示例
 ```python
