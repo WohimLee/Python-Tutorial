@@ -1,6 +1,5 @@
 import struct
 import time
-import re
 import numpy as np
 import os.path as osp
 import matplotlib.pyplot as plt
@@ -20,25 +19,6 @@ def mnist_images(path):
     images = struct.unpack_from("B"*num_item*rows*cols, data, 16)
     return np.array(images).reshape(num_item, -1)
 
-
-def xml_parse(file, label_map):
-    import re
-    with open(file) as f:
-        data = f.read().replace("\t", "").replace("\n", "")
-    objs = re.findall(r"<object>(.*?)</object>", data)
-    obj_bboxes = []
-    for obj in objs:
-        xmin = re.findall(r"<xmin>(.*?)</xmin>", obj)[0]
-        ymin = re.findall(r"<ymin>(.*?)</ymin>", obj)[0]
-        xmax = re.findall(r"<xmax>(.*?)</xmax>", obj)[0]
-        ymax = re.findall(r"<ymax>(.*?)</ymax>", obj)[0]
-        name = re.findall(r"<name>(.*?)</name>", obj)[0]
-        obj_bboxes.append((xmin, ymin, xmax, ymax, label_map.index(name)))
-    res = np.zeros((0, 5), dtype = np.float32)
-    if len(obj_bboxes) > 0:
-        res = np.array(obj_bboxes, dtype=np.float32)
-    return res
-
 def showtime(func):
     def wrapper(*args, **kwargs):
         start = time.time()
@@ -47,17 +27,7 @@ def showtime(func):
     return wrapper
 
 
-
-
-@showtime
-def one_hot1(label, classes=10):
-    n = len(label)
-    res = np.zeros((n, classes))
-    res[np.arange(n), label] = 1
-    return res
-
-@showtime
-def one_hot2(labels, classes=10):
+def one_hot(labels, classes=10):
     res  = np.zeros((len(labels), classes))
     rows = res.shape[0]
     for row in range(rows):
@@ -76,7 +46,7 @@ if __name__ == '__main__':
     test_labels = mnist_labels(train_lables)
     test_images = mnist_images(test_images).reshape(-1, 28, 28)
 
-    # print()
-    plt.imshow(test_images[0])
+    print(test_images.shape)
+    sample = test_images[np.random.choice(10000)]
+    plt.imshow(sample, cmap='gray')
     plt.show()
-
