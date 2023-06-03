@@ -31,3 +31,15 @@ sites = {1: "Google", 2: "Baidu", 3: "Wiki"}
 myvar = pd.Series(sites, index = [1, 2], name = "Series-TEST")
 print(myvar)
 ```
+
+
+>示例 3：指定索引值
+```python
+import pandas as pd
+
+a = ["Google", "Baidu", "Wiki"]
+
+myvar = pd.Series(a, index = ["x", "y", "z"])
+
+print(myvar)
+```

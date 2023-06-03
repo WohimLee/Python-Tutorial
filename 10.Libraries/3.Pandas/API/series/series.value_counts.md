@@ -1,7 +1,8 @@
+&emsp;
+# series.value_counts
 
 
-
->示例 9：统计 grammer 列中每种编程语言出现的次数
+>示例：统计 grammer 列中每种编程语言出现的次数
 ```python 
 import numpy as np
 import pandas as pd

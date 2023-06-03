@@ -13,8 +13,8 @@
 import pandas as pd
    
 # 三个字段 name, site, age
-nme = ["Google", "Runoob", "Taobao", "Wiki"]
-st = ["www.google.com", "www.runoob.com", "www.taobao.com", "www.wikipedia.org"]
+nme = ["Google", "Apple", "Taobao", "Wiki"]
+st = ["www.google.com", "www.apple.com", "www.taobao.com", "www.wikipedia.org"]
 ag = [90, 40, 80, 98]
    
 # 字典

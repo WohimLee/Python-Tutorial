@@ -3,7 +3,7 @@
 
 
 
->示例 7：计算 score 列平均值
+>示例：计算 score 列平均值
 ```python
 import numpy as np
 import pandas as pd

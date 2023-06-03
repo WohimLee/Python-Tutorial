@@ -1,7 +1,7 @@
 &emsp;
 # df.reindex
-
->示例1 ：reindex修改行、列
+- reindex修改行、列
+>示例
 
 ```py
 import pandas as pd

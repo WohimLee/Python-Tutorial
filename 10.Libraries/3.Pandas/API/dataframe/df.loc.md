@@ -2,7 +2,7 @@
 # df.loc
 Pandas 可以使用 loc 属性返回指定行的数据，如果没有设置索引，第一行索引为 0，第二行索引为 1，以此类推：
 
->示例 1
+>示例
 ```python
 import pandas as pd
 
@@ -21,7 +21,7 @@ print(df.loc[1])
 ```
 
 
->示例 2：
+>示例
 ```python
 import pandas as pd
 # 也可以返回多行数据，使用 [[ ... ]] 格式，... 为各行的索引，以逗号隔开
@@ -38,7 +38,7 @@ print(df.loc[[0, 1]])
 
 
 
->示例 4：使用 loc 属性返回指定索引对应到某一行
+>示例：使用 loc 属性返回指定索引对应到某一行
 ```py
 import pandas as pd
 
@@ -52,7 +52,7 @@ print(df.loc["day2"])
 ```
 
 
->示例 5：提取含有字符串"Python" 的行
+>示例：提取含有字符串"Python" 的行
 ```python
 data = {"grammer":["Python","C","Java","GO",np.nan,"SQL","PHP","Python"],
        "score":[1,2,np.nan,4,5,6,7,10]}
@@ -65,7 +65,7 @@ print(df3)
 ```
 
 
->示例 6：提取 score 列中值大于3的行
+>示例：提取 score 列中值大于 3 的行
 
 ```py
 import numpy as np
@@ -81,7 +81,7 @@ print(df3)
 ```
 
 
->示例 8：提取 score 列值大于3小于7的行
+>示例：提取 score 列值大于3小于7的行
 ```py
 import numpy as np
 import pandas as pd
