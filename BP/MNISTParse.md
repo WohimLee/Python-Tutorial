@@ -1,7 +1,5 @@
 &emsp;
 # MNIST数据集解析
-
-&emsp;
 # 1 大小端
 ## 1.1 概念
 
@@ -31,7 +29,6 @@
 &emsp;
 # 2 struct 介绍
 
-&emsp;
 ## 2.1 Byte Order, Size, and Alignment
 By default, C types are represented in the machine’s native format and byte order, and properly aligned by skipping pad bytes if necessary (according to the rules used by the C compiler).
 

@@ -4,8 +4,7 @@
 
 >示例
 ```python
-import pandas as pd
-df = pd.read_csv('data/BostonHousingPrices.csv')
-print(df.to_string())
+df = pd.read_csv('./data/BostonHousePrices.csv')
+print(type(df.to_string()))
 ```
 

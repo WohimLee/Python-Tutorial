@@ -1,9 +1,6 @@
 &emsp;
 # pd.Series
-
-
-
->示例 1：创建一个简单的 Series
+>示例：创建一个简单的 Series
 ```python
 import pandas as pd
 
@@ -13,7 +10,7 @@ print(myvar)
 ```
 
 
->示例 2：使用 key/value 对象，类似字典来创建 Series
+>示例：使用 key/value 对象，类似字典来创建 Series
 ```python
 import pandas as pd
 
@@ -22,7 +19,7 @@ myvar = pd.Series(sites)
 print(myvar)
 ```
 
->示例3 设置 Series 名称参数
+>示例：设置 Series 名称参数
 
 ```python
 import pandas as pd
@@ -33,7 +30,7 @@ print(myvar)
 ```
 
 
->示例 3：指定索引值
+>示例：指定索引值
 ```python
 import pandas as pd
 

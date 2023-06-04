@@ -1,8 +1,6 @@
 &emsp;
 # JSON
 
-
-# JSON函数区别
 >序列化
 - 变量从内存中变成可存储或传输的过程称之为序列化序列化是将对象状态转化为可保存或可传输格式的过程
 - dump 和 dumps 都实现了序列化
@@ -48,8 +46,9 @@ a_str = json.dumps(a_dict)
     - dumps： 是将dict转换为string
     - dump： 是将dict类型转换为json格式字符串，存入文件
 
-## JSON进阶
-### 序列化
+&emsp;
+## 示例
+>序列化
 ```py
 # 使用class对象的__dict__方法
 class Student(object):
@@ -62,7 +61,7 @@ s = Student('Bob', 20, 88)
 print(json.dumps(s, default=lambda obj: obj.__dict__))
 ```
 
-### 反序列化
+>反序列化
 ```py
 def dict2student(d):
     return Student(d['name'], d['age'], d['score'])
@@ -70,7 +69,7 @@ def dict2student(d):
 json_str = '{"age": 20, "score": 88, "name": "Bob"}'
 print(json.loads(json_str, object_hook=dict2student))
 ```
-### 实用案例
+>示例
 ```py
 def load_json(path):
     with open(path) as f:

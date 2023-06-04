@@ -1,13 +1,9 @@
 &emsp;
 # df.drop
-
-
-
 >df.drop
 - 丢掉某行/列
 - df.drop('columns',axis=1,inplace='True')
   - inplace: True 改变原始数据; False 不改变原始数据
-
 
 
 >示例 ：删除行、列
