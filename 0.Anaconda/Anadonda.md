@@ -42,8 +42,7 @@ conda create --name [自定义环境名称] python=3
 conda create --name [自定义环境名称] python=3.5
 ```
 
-# 输入y确认创建。
-```
+
 >删除某个环境
 ```shell
 conda remove --name [自定义环境名] --all
@@ -70,6 +69,11 @@ deactivate
 - 小伙伴拿到 environment.yml 文件后，将该文件放在工作目录下，可以通过以下命令从该文件创建环境
 ```shell
 conda create --name [自定义环境名] --file pkgs.txt
+```
+
+>yaml 创建环境
+```py
+conda env create -f environment.yaml
 ```
 
 
@@ -111,3 +115,10 @@ conda list -n your_env_name
       ```
       ~/anaconda3/envs/PyTorch/bin/pip install [包名]
       ```
+
+
+
+>pip
+```py
+pip install -r requirements.txt
+```

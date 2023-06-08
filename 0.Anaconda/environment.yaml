@@ -1,0 +1,36 @@
+name: nice-slam
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=1_llvm
+  - blas=1.0=mkl
+  - brotli=1.0.9=he6710b0_2
+  - brotlipy=0.7.0=py37h27cfd23_1003
+  - bzip2=1.0.8=h7f98852_4
+  - ca-certificates=2022.3.29=h06a4308_0
+  - certifi=2021.10.8=py37h06a4308_2
+  - cffi=1.15.0=py37hd667e15_1
+  - cryptography=36.0.0=py37h9ce1e76_0
+  - cudatoolkit=11.3.1=h2bc3f7f_2
+  - cycler=0.11.0=pyhd3eb1b0_0
+  - dbus=1.13.18=hb2f20db_0
+  - embree=2.17.7=ha770c72_1
+  - expat=2.4.4=h295c915_0
+  - ffmpeg=4.3=hf484d3e_0
+  - fontconfig=2.13.1=h6c09931_0
+  - fonttools=4.25.0=pyhd3eb1b0_0
+  - freetype=2.10.4=h0708190_1
+  - giflib=5.2.1=h7b6447c_0
+  - glib=2.69.1=h4ff587b_1
+  - gmp=6.2.1=h58526e2_0
+  - pip:
+    - addict==2.4.0
+    - anyio==3.5.0
+    - argon2-cffi==21.3.0
+    - argon2-cffi-bindings==21.2.0
+    - argparse==1.4.0
+    - attrs==21.4.0
+ 
