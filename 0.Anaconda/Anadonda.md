@@ -60,21 +60,6 @@ deactivate
 ```
 
 
->分享环境
-- 如果你想把你当前的环境配置与别人分享，这样ta可以快速建立一个与你一模一样的环境（同一个版本的python及各种包）来共同开发/进行新的实验。一个分享环境的快速方法就是给ta一个你的环境的 .yml 文件
-- 首先通过activate [自定义环境名] 进入要分享的环境[自定义环境名]，然后输入下面的命令会在当前工作目录下生成一个 pkgs.txt 文件，
-    ```shell
-    conda list --explicit > pkgs.txt
-    ```
-- 小伙伴拿到 environment.yml 文件后，将该文件放在工作目录下，可以通过以下命令从该文件创建环境
-```shell
-conda create --name [自定义环境名] --file pkgs.txt
-```
-
->yaml 创建环境
-```py
-conda env create -f environment.yaml
-```
 
 
 &emsp;
@@ -117,8 +102,8 @@ conda list -n your_env_name
       ```
 
 
-
 >pip
 ```py
-pip install -r requirements.txt
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple 
 ```
+
