@@ -9,14 +9,16 @@ images = [img for img in os.listdir(image_folder) if img.endswith(".png")]
 images.sort(key=lambda x: int(re.search(r'\d+', x).group()))
 
 frame = cv2.imread(os.path.join(image_folder, images[0]))
-frameSize = (frame.shape[1], frame.shape[0])
+scale = 0.7
+frameSize = (int(frame.shape[1]*scale), int(frame.shape[0]*scale))
 
-
-# video = cv2.VideoWriter(video_name, 0, 1, (width,height))
-video = cv2.VideoWriter(video_name, cv2.VideoWriter_fourcc(*'mp4v'), 30, frameSize)
+video = cv2.VideoWriter(video_name, 0, 30, frameSize)
+# video = cv2.VideoWriter(video_name, cv2.VideoWriter_fourcc(*'mp4v'), 30, frameSize)
 
 for i, image in enumerate(images):
-    video.write(cv2.imread(os.path.join(image_folder, image)))
+    image = cv2.imread(os.path.join(image_folder, image))
+    resized_image = cv2.resize(image, frameSize)
+    video.write(resized_image)
     if i % 100 == 0:
         print(f"The {i}/{len(images)} is done.")
 
