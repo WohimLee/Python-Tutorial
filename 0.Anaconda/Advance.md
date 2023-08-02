@@ -62,11 +62,11 @@ dependencies:
     - python=3.8.2
     - pip
     - pip:
-    - mlflow==1.25.1
-    - torchvision>=0.9.1
-    - torch>=1.9.0
-    - pytorch-lightning==1.6.1
-    - -i https://pypi.tuna.tsinghua.edu.cn/simple
+      - mlflow==1.25.1
+      - torchvision>=0.9.1
+      - torch>=1.9.0
+      - pytorch-lightning==1.6.1
+      - -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 &emsp;
