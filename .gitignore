@@ -1,6 +1,6 @@
 
 # files
-*.DS_Store
+.DS_Store
 test.py
 rewrite.py
 Exercise-class.md
