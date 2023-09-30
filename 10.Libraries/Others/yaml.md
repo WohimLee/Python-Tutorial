@@ -1,2 +1,88 @@
 &emsp;
-# yaml
+# YAML
+YAML（全称为YAML Ain't Markup Language）是一种人类可读的数据序列化格式，被广泛应用于配置文件、数据交换、日志文件等场景。YAML的语法简洁、易读易写，可以用缩进表示层次关系，也支持键值对和列表等形式
+
+&emsp;
+## 1 语法规则
+- 大小写敏感
+- 使用缩进表示层次关系，缩进必须是空格，不能使用 Tab
+- 缩进的空格数目不重要，只要相同层级的元素左侧对齐即可
+- `#` 表示注释，从这个字符一直到行尾，都会被解析器忽略
+- 字符串可以用单引号或双引号括起来，也可以不用引号，但如果字符串中包含特殊字符，就必须使用引号括起来
+
+
+
+
+
+
+除了这些基本语法，YAML还支持很多高级特性，比如引用、折叠样式、多行字符串等等。
+
+&emsp;
+## 2 常用元素
+
+### 2.1 Maps
+首先我们来看看 Maps，我们都知道 Map 是字典，就是一个 `key:value` 的键值对，Maps 可以让我们更加方便的去书写配置信息
+
+>Example
+- `---` 是分隔符，是可选的，在单一文件中，可用连续三个连字号 `---` 区分多个文件
+- 这里我们可以看到，我们有两个键：kind 和 apiVersion，他们对应的值分别是：v1 和 Pod
+```yaml
+---
+apiVersion: v1
+kind: Pod
+```
+
+
+YAML 处理器是根据行缩进来知道内容之间的关联性的。比如我们上面的 YAML 文件，我用了两个空格作为缩进，空格的数量并不重要，但是你得保持一致，并且至少要求一个空格
+
+但是 YAML 中决不允许使用 Tab 作为缩进
+
+&emsp;
+### 2.2 Lists
+Lists就是列表，说白了就是数组
+
+>Example 1
+- 在 YAML 文件中我们可以这样定义
+- 你可以有任何数量的项在列表中
+    - 每个项的定义以破折号（-）开头的
+    - 与父元素之间可以缩进也可以不缩进。
+```yaml
+args
+  - Cat
+  - Dog
+  - Fish
+```
+
+>Example 2
+- Example 1 对应的 JSON 格式
+```json
+{
+    "args": [ 'Cat', 'Dog', 'Fish' ]
+}
+```
+
+>Example 3
+- Lists 的子项也可以是 Maps，Maps 的子项也可以是 Lists 如下所示：
+```yaml
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ydzs-site
+  labels:
+    app: web
+spec:
+  containers:
+    - name: front-end
+      image: nginx
+      ports:
+        - containerPort: 80
+    - name: flaskapp-demo
+      image: cnych/flaskapp
+      ports:
+        - containerPort: 5000
+```
+
+
+
+
