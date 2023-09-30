@@ -1,0 +1,18 @@
+# Example
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ydzs-site
+  labels:
+    app: web
+spec:
+  containers:
+    - name: front-end
+      image: nginx
+      ports:
+        - containerPort: 80
+    - name: flaskapp-demo
+      image: cnych/flaskapp
+      ports:
+        - containerPort: 5000
