@@ -1,12 +1,33 @@
 &emsp;
-# Conda 的高级使用
+# Advance
+## 1 pip
+
+>requirements.txt
+```txt
+addict==2.4.0
+anyio==3.5.0
+argon2-cffi==21.3.0
+argon2-cffi-bindings==21.2.0
+argparse==1.4.0
+attrs==21.4.0
+babel==2.9.1
+backcall==0.2.0
+beautifulsoup4==4.10.0
+```
+
+>安装
+```sh
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+## 2 Conda 的高级使用
 >Conda yaml 环境文件内容
 - name: 环境名称
 - dependencies: 依赖项，例如您希望在创建环境时预安装的库
 - channels: 下载源
 
-&emsp;
-## 1 导出与创建
+
+### 2.1 导出与创建
 
 >将环境导出成 yaml
 - 先 activate 自己的环境
@@ -24,7 +45,7 @@
 通过这种方式创建的 conda 环境会经常碰到下载失败的问题，如何换源？
 
 &emsp;
-## 2 Conda 源的添加
+### 2.2 Conda 源的添加
 ```yaml
 name: hyperparam_example
 channels:
@@ -52,7 +73,7 @@ dependencies:
 
 
 &emsp;
-## 3 pip 源的添加
+### 2.3 pip 源的添加
 - pip 的源添加在 `pip:` 的最后一行
 >pip 国内镜像源添加
 ```yaml
@@ -70,7 +91,7 @@ dependencies:
 ```
 
 &emsp;
-## 4 yaml 直接导入 requirements.txt
+### 2.4 yaml 直接导入 requirements.txt
 ```yaml
 name: test-env
 dependencies:
@@ -82,7 +103,7 @@ dependencies:
 ```
 
 &emsp;
-## 5 yaml 安装 wheel 文件
+### 2.5 yaml 安装 wheel 文件
 - 下载 wheel 文件到 yaml 所在文件夹
 ```py
 dependencies:
