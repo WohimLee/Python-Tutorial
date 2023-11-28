@@ -1,6 +1,6 @@
 &emsp;
 # Advance
-## 1 pip
+## 1 pip 的使用
 
 >requirements.txt
 ```txt
