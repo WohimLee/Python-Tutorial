@@ -21,6 +21,7 @@ a_json = json.load(open('demo.json','r'))
 >loads
 - 针对内存对象，将string转换为dict (将string转换为dict)
 ```py
+data = f'''[{{"Q":"xxx", "A":"xxx"}}, {{"Q":"xxx", "A":"xxx"}}]''' # 注意f''''''里面的字典要 {{}}
 a = json.loads('{'a':'1111','b':'2222'}')
 ```
 
@@ -31,8 +32,11 @@ a = json.loads('{'a':'1111','b':'2222'}')
 - 将dict类型转换为json字符串格式，写入到文件 （易存储）
 ```py
 a_dict = {'a':'1111','b':'2222'}
-json.dump(a_dict, open('demo.json', 'w')
+with open('demo.json', 'w') as file:
+    json.dump(a_dict, file, indent=2, ensure_ascii=False)
 ```
+- indent: 分行, 不加这个参数，存储的 json 会全部列为同一行
+- ensure_ascii: 一定要加这个参数, 默认 True 会存成 ASCII 码
 >dumps
 - 将dict转换为string (易传输)
 ```py
