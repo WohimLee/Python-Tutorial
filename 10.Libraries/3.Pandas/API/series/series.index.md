@@ -1,5 +1,0 @@
-&emsp;
-# series.index
-
-
-

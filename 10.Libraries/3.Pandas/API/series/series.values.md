@@ -1,2 +1,0 @@
-&emsp;
-# series.value
